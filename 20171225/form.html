@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>表单</title>
+        <link rel="stylesheet" href="">
+        <link rel="icon" href="">
+    </head>
+    <body>
+        <!--
+            action 提交地址
+            method 提交方式 get/post
+            target 可选择目标提交
+
+            enctype 提交数据处理方式
+                默认 在发送前对所有字符进行编码(空格转为+, 特殊字符转ascii) application/x-www-form-urlencoded
+                上传用 multipart/form-data 且 必须 post
+        -->
+        <!-- 一个页面多个表单 可使用 fieldset 区分 -->
+        <fieldset>
+            <legend>表单标题</legend>
+
+            <form action="" method="post" enctype="">
+                <!--
+                    type 设置表单控件类型
+                    name 设置表单名字 后台用
+                    value 默认值
+                -->
+                <!-- 文本框 -->
+                <input type="text" name="username" value="">
+
+                <!-- 密码框 -->
+                <input type="password" name="password">
+
+                <!-- 单选框 (有切换效果的 需要名字一致) 并设置不同默认值-->
+                <!-- checked 默认选中设置 -->
+                <!-- label 使控件更好选择 -->
+                <label>
+                    <input type="radio" name="sex" value="0"> 女<br>
+                </label>
+                <label>
+                    <input type="radio" name="sex" value="1" checked=""> 男<br>
+                </label>
+
+                <!-- 多选框 (要使多个值都能提交 需要使用数组形式) -->
+                <input type="checkbox" name="habby[]" value="0"> 运动<br>
+                <input type="checkbox" name="habby[]" value="1" checked=""> 睡觉<br>
+
+                <!-- 上传框 -->
+                <input type="file" name="upload"><br>
+
+                <!-- 隐藏框 不可见 -->
+                <input type="hidden" name="uid" value="1234567890"><br>
+
+                <!-- 普通按钮 -->
+                <input type="button" name="button" value="按钮显示文本">
+
+                <!-- 提交按钮 -->
+                <input type="submit" name="submit" value="提交">
+
+                <!-- 重置按钮 -->
+                <input type="reset" name="reset" value="重置">
+
+                <!-- 下拉框 selected 默认选中 -->
+                <select name="degree">
+                    <!-- 下拉组 -->
+                    <option value="-1" selected="">-- 请选择 --</option>
+                    <optgroup label="下拉组名">
+                        <option value="1" title="提示文字">小学</option>
+                        <option value="2" title="提示文字">初中</option>
+                        <option value="3" title="提示文字">高中/职校/技校</option>
+                        <option value="4" title="提示文字">大专</option>
+                        <option value="5" title="提示文字">本科</option>
+                        <option value="6" title="提示文字">硕士</option>
+                        <option value="7" title="提示文字">博士</option>
+                    </optgroup>
+                </select>
+
+                <!-- 文本域 可多行输入 -->
+                <textarea name="description" id="" cols="30" rows="10"></textarea>
+            </form>
+        </fieldset>
+    </body>
+    <script type="text/javascript"></script>
+</html>

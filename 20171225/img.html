@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>图片</title>
+        <link rel="stylesheet" href="">
+        <link rel="icon" href="">
+    </head>
+    <body>
+        <!-- alt 当图片不存在 使用该属性的值代替显示 -->
+        <!-- src 图片源 可以 链接 或 base64 -->
+        <!-- width height 宽度 高度 | 单独设置一个 另一个自适应修改 -->
+        <!-- title 提示文字 -->
+        <img alt="百度新闻" src="http://box.bdimg.com/static/fisp_static/common/img/searchbox/logo_news_276_88_1f9876a.png" width="135" title="百度新闻">
+
+        <!-- 图片与文字 -->
+        <p style="width: 200px;"><img style="float: left;" alt="百度新闻" src="http://box.bdimg.com/static/fisp_static/common/img/searchbox/logo_news_276_88_1f9876a.png" width="135" title="百度新闻">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse consectetur obcaecati vel, sed consequuntur cum odio recusandae reiciendis dolore iusto similique ea vero, unde earum perferendis sapiente laborum, assumenda reprehenderit.</p>
+        <hr>
+
+        <p style="width: 200px;"><img style="float: right;" alt="百度新闻" src="http://box.bdimg.com/static/fisp_static/common/img/searchbox/logo_news_276_88_1f9876a.png" width="135" title="百度新闻">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse consectetur obcaecati vel, sed consequuntur cum odio recusandae reiciendis dolore iusto similique ea vero, unde earum perferendis sapiente laborum, assumenda reprehenderit.</p>
+        <hr>
+
+        <!-- 图片映射 -->
+        <!-- img[usemap="#usemapId"] -> map[name="usemapId"] -->
+        <img src="https://www.w3cschool.cn/statics/images/course/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+
+        <map name="planetmap">
+            <!--
+                rect 矩形      | 上左坐标 x1, y1, 下右坐标 x2, y2
+                circle 圆形    | 圆心坐标 x1, y1, 圆形半径 r
+                poly 多边形    | 顶点坐标 x1, y1, x2, y2, x3, y3 ...
+            -->
+            <area shape="rect" coords="0,0,82,126" target="_blank" alt="Sun" href="https://www.w3cschool.cn/statics/images/course/sun.gif">
+            <area shape="circle" coords="90,58,3" target="_blank" alt="Mercury" href="https://www.w3cschool.cn/statics/images/course/merglobe.gif">
+            <area shape="circle" coords="124,58,8" target="_blank" alt="Venus" href="https://www.w3cschool.cn/statics/images/course/venglobe.gif">
+        </map>
+    </body>
+    <script type="text/javascript"></script>
+</html>

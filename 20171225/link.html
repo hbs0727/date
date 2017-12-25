@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>链接</title>
+        <link rel="stylesheet" href="">
+        <link rel="icon" href="">
+    </head>
+    <body>
+        <!-- 链接本站链接 -->
+        <a href="base.html">普通链接</a><br>
+
+        <!--
+            链接知识
+            文件名.后缀名 -> 当前目录下的文件名.后缀名 -> ./文件名.后缀名
+            /文件名.后缀名 -> 根目录下的文件名.后缀名 (此根为当前域的服务器根目录)
+            ../文件名.后缀名 -> 上一级目录下的文件名.后缀名
+        -->
+
+        <!--  链接非本站链接 (新窗体/新标签打开) -->
+        <a href="https://www.baidu.com/s?wd=习近平带领中国经济" target="_blank" title="习近平带领中国经济">习近平带领中国经济</a><br>
+
+        <!-- 图片链接 -->
+        <a href="http://news.baidu.com/"><img alt="百度新闻" src="http://box.bdimg.com/static/fisp_static/common/img/searchbox/logo_news_276_88_1f9876a.png"></a><br>
+
+        <!-- 书签/锚点 -->
+        <!-- 通过 *[id="hash"] => a[href="url#hash"] -->
+        <a href="#tips-0001">跳转到短文区:</a>
+        <p id="tips-0002" style="height: 9999px;"></p>
+        <a href="#tips-0002">返回到空白区:</a>
+        <p id="tips-0001">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus quasi minima quis quia molestiae sunt explicabo facilis commodi, nemo, recusandae beatae ducimus tempore ipsa nisi asperiores eos vero nihil modi.</p>
+
+    </body>
+    <script type="text/javascript"></script>
+</html>

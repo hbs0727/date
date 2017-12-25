@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>框架</title>
+        <link rel="stylesheet" href="">
+        <link rel="icon" href="">
+    </head>
+    <body>
+        <!-- 在一个html内嵌套另一个文档 使用框架可以使统一浏览器同时显示不止一个页面 但不利于seo 一般后台使用居多 -->
+        <!-- src 指向文档的位置 width height 框架的宽高 -->
+        <!-- 框架默认有边框 可以通过 frameborder 设置不显示边框 -->
+        <!-- 通过 iframe[name="iframeName"] => a[target="iframeName"] 可进行 链接框架选择-->
+        <a href="https://www.jd.com" target="link">京东</a><br>
+        <iframe src="https://www.baidu.com" width="160" height="90" frameborder="0" name="link"></iframe>
+    </body>
+    <script type="text/javascript"></script>
+</html>

@@ -10,6 +10,8 @@
 - git push -u origin master
 - git pull https://github.com/hbs0727/date
 
+- git config --global core.autocrlf false
+
 - 日常版本库日志
 - 8位年月日 | 描述
 - 20171225  | web开发知识整理 0001 |
