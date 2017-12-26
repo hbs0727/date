@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS选择器</title>
+        <link rel="stylesheet" href="">
+        <link rel="icon" href="">
+        <style>
+            /* 基本选择器 */
+            /* 通配符选择器 */
+            * {
+                font-size: 12px;
+            }
+
+            /* id 选择器 */
+            #myid {
+                color: #900;
+            }
+
+            /* 类选择器 */
+            .myclassname {
+                color: #090;
+            }
+
+            /* 标签选择器 */
+            div {
+                color: #009;
+            }
+
+            /* 群组选择器 */
+            .myclassname, div {
+                border: 1px solid #ddd;
+            }
+
+            /* 层次选择器 */
+            /* 相邻选择器 */
+            /* 对后面的 div 做处理 */
+            .myclassname + div {
+                background: #eee;
+            }
+
+            /* 子选择器 */
+            /* 对后面的 li 做处理 */
+            /* 由于 ul 里面还是 ul 所以给予 .root 作为区分 */
+            /* 部分样式有继承效果 */
+            ul.root > li {
+                font-size: 14px;
+            }
+
+            /* 后代选择器 */
+            ul.root li {
+                font-weight: 900;
+            }
+
+            /* 兄弟选择器 */
+            /* 只要 #myid 之后 有 div的 同辈即可 */
+            #myid ~ div {
+                border-radius: 5px;
+            }
+
+            /* 伪类选择器 */
+            /* 链接伪类 未被访问过 */
+            a:link {
+                text-decoration: none;
+            }
+
+            /* 链接伪类 已被访问过 */
+            a:visited {
+                color: #eee;
+            }
+
+            /* 用户行为 被处于激活 作用在 链接 锚点 按钮 */
+            a:active {
+                color: #ddd;
+                background: #000;
+            }
+
+            /* 用户行为 被处于悬停(停留) */
+            a:hover {
+                color: #900;
+                font-weight: 900;
+            }
+
+            /* 用户行为 获取焦点 */
+            input:focus {
+                background: #900;
+            }
+
+            /* 目标选择器 */
+            /* 匹配相关url相同的元素 */
+            /* 和锚点有关 做长单页非常有效 */
+            #demo:target {
+                color: #900;
+            }
+
+            input:checked + span {
+                color: #369;
+            }
+
+            input:disabled + span {
+                cursor: not-allowed;
+            }
+
+            input:enabled + span {
+                font-weight: 700;
+            }
+
+            /* 结构伪类 */
+            /* ul.root 的 第一个li */
+            ul.root li:first-child {
+                background: #099;
+            }
+
+            /* ul.root 的 最后一个个li */
+            ul.root li:last-child {
+                background: #909;
+            }
+
+            /* 匹配 元素的根 即 html */
+            html:root {
+                font-style: italic;
+            }
+
+            /* 选择 子级 */
+            /* ul 下 第 3 个 li */
+            /* 可以公式 2n + 1 初始值 1 */
+            /* 可以使用关键字 even 或 odd (奇偶数) */
+            ul li:nth-child(3) {
+                color: #123456;
+            }
+
+            /* ul 下 到时第 n 个 li */
+            ul li:nth-last-child(2) {
+
+            }
+
+            /* 选择父元素内具有指定类型的第n个E元素 */
+            ul li:nth-of-type(2) {
+
+            }
+
+            /* 选择父元素内具有指定类型的倒数第n个E元素 */
+            ul li:nth-last-of-type(2) {
+
+            }
+
+            /* 选择父元素内具有指定类型的第一个E元素，与E:nth-of-type(1)等同 */
+            ul li:first-of-type {
+
+            }
+
+            /* 选择父元素内具有指定类型的最后一个E元素，与E:nth-last-of-type(1)等同 */
+            ul li:last-of-type {
+
+            }
+
+            /* 选择父元素只包含一个子元素，且该子元素匹配E元素 */
+            ul li:only-child {
+
+            }
+
+            /* 选择父元素只包含一个同类型子元素，且该子元素匹配E元素 */
+            ul li:only-of-type {
+
+            }
+
+            /* 选择没有子元素的元素，而且该元素也不包含任何文本节点 */
+            ul li:empty {
+
+            }
+
+            /* 否定伪类选择器 */
+            li:not(.active) {
+
+            }
+
+            /* 属性选择器 */
+            /* 带有指定选择器 */
+            [title] {
+
+            }
+
+            /* 带有指定属性和值的选择器 */
+            [title="abc"] {
+
+            }
+
+            /* 带有指定属性 并包含指定词汇的选择器 (一般词汇使用空格 中横线 下划线分割) */
+            [title~="abc"] {
+
+            }
+
+            /* 带有指定属性 并带有指定开头(前缀) 该值为整个单词 */
+            [title~="abc"] {
+
+            }
+
+            /* 带有指定属性 并以指定开头 */
+            [title^="abc"] {
+
+            }
+
+            /* 带有指定属性 并以指定结尾 */
+            [title$="abc"] {
+
+            }
+
+            /* 带有指定属性 并包含指定值 */
+            [title*="abc"] {
+
+            }
+        </style>
+    </head>
+    <body>
+        <p id="myid">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione animi deserunt odio quos recusandae incidunt ullam! Iure nesciunt hic, sunt corporis quaerat soluta architecto, eaque necessitatibus veniam omnis dolores commodi!</p>
+
+        <p class="myclassname">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil omnis, maxime similique dicta molestiae excepturi commodi odit labore! Nihil, incidunt, repellat? Rem sapiente, dolore doloremque porro vel voluptatibus nemo laborum!</p>
+
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis laudantium provident aliquam fuga possimus quis tempora illo eos ut unde itaque necessitatibus ducimus quo consequatur reprehenderit amet atque deserunt, nemo.</div>
+
+        <ul class="root">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>
+                <ul><li>son</li></ul>
+            </li>
+        </ul>
+
+        <br>
+        <a href="?rand=0001">链接</a><br>
+
+        <input type="text"><br>
+
+        <a href="#demo">demo</a><br>
+        <p id="demo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maxime ratione eius rem est molestiae vitae ex odio sint, distinctio illo quisquam ipsa, excepturi officiis tempore praesentium, hic repellat alias!</p>
+
+        <!-- UI 元素状态 -->
+        <label>
+            <input type="checkbox" checked="" disabled="">
+            <span>文字1</span>
+        </label>
+        <label>
+            <input type="checkbox">
+            <span>文字2</span>
+        </label>
+
+    </body>
+    <script type="text/javascript"></script>
+</html>

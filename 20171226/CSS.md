@@ -1,0 +1,12 @@
+- CSS 层叠样式表 | Cascading Style Sheets
+- CSS 表现 HTML 或 XML 的 标记语言 | 能使页面更美观 | 内容和表现分离 | 浏览器解释型语言 | 无需编译
+- CSS 由 W3C 和 CSS 工作组 发布推荐和维护
+- CSS 语法分 选择器 属性 值 selector { property : value; }
+- CSS 3种使用方式
+    - 外联(外部)
+    - <link rel="stylesheet" href="style.css">
+    - 嵌入(内页)
+    - <style></style>
+    - 内联(行内)
+    - style=""
+    - 优先级: 内联 > 嵌入 > 外联
